@@ -1,0 +1,1077 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.ontologies.khaos.uma.es/bigowl4dq#"
+     xml:base="http://www.ontologies.khaos.uma.es/bigowl4dq"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:bigowl4dq="http://www.ontologies.khaos.uma.es/data-quality/">
+    <owl:Ontology rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/domain -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/domain">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessOutput"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessOutput"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/domainValueCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/domainValueCondition">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/ValueCondition"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/generates -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/generates">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/QualityMeasurementWay"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/QualityMeasure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/generatesAsAssessmentOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/generatesAsAssessmentOutput">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityAssessment"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessRuleDataQualityAssessment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/generatesAsDataUsabilityRecommendationOuput -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/generatesAsDataUsabilityRecommendationOuput">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DataUsabilityRecomendation"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessRuleDataUsabilityDecision"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/generatesAsMeasurementOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/generatesAsMeasurementOutput">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityMeasurement"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessRuleDataQualityMeasurementDimension"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/groups -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/groups">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityModel"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/hasAssociated -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/hasAssociated">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Dataset"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DataUsabilityRecomendation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/hasClause -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/hasClause">
+        <rdfs:domain rdf:resource="http://promsns.org/def/dmn#BusinessRule"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Clause"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/hasCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/hasCondition">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Clause"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Condition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/hasCriteriaDecision -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/hasCriteriaDecision">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessRuleDataUsabilityDecision"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DecisionCriteria"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/hasDataType -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/hasDataType">
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/hasField -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/hasField">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Dataset"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Field"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/hasFieldDomain -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/hasFieldDomain">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Field"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/hasHitPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/hasHitPolicy">
+        <rdfs:domain rdf:resource="http://promsns.org/def/dmn#BusinessRule"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Priority"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/hasOperator -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/hasOperator">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/ValueCondition"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Operator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/hasValueCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/hasValueCondition">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Condition"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/ValueCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/includes -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/includes">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityAssessment"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/inputDomain -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/inputDomain">
+        <rdfs:domain rdf:resource="http://promsns.org/def/dmn#BusinessRule"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessOutput"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/inputDomainCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/inputDomainCondition">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Condition"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessOutput"/>
+                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Field"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/inputRef -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/inputRef">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessRuleDataValue"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Field"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/involves -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/involves">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/QualityMeasurementWay"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DecisionCriteria"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/isAimedByMeasuring -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/isAimedByMeasuring">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessRuleDataQualityMeasurementDimension"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/isCharacterizedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/isCharacterizedBy">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DecisionCriteria"/>
+        <rdfs:range rdf:resource="http://promsns.org/def/dmn#BusinessRule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/isDefinedAccordingTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/isDefinedAccordingTo">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/QualityMeasure"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/isDescribedByMeansOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/isDescribedByMeansOf">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Metadata"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/isMeasuredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/isMeasuredBy">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityCharacteristic"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityMeasurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/isProducedByConsidering -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/isProducedByConsidering">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/QualityMeasure"/>
+        <rdfs:range rdf:resource="http://promsns.org/def/dmn#BusinessRule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/isQualifiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/isQualifiedBy">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Dataset"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/QualityMeasure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/isRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/isRelatedTo">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Condition"/>
+        <rdfs:range rdf:resource="http://promsns.org/def/dmn#BusinessRule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/needsAsInputForAssessment -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/needsAsInputForAssessment">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityAssessment"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessRuleDataQualityAssessment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/needsAsInputForDataUsabilityRecommendation -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/needsAsInputForDataUsabilityRecommendation">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DataUsabilityRecomendation"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessRuleDataUsabilityDecision"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/needsAsInputForMeasurement -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/needsAsInputForMeasurement">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityMeasurement"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessRuleDataValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/outputClause -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/outputClause">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Clause"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/outputDomain -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/outputDomain">
+        <rdfs:domain rdf:resource="http://promsns.org/def/dmn#BusinessRule"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/outputResult -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/outputResult">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://promsns.org/def/dmn#BusinessRule"/>
+                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Clause"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessOutput"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/valueEnumerateResult -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/valueEnumerateResult">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Clause"/>
+        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Enumerate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/annotation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/annotation">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Clause"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/businessRulesSource -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/businessRulesSource">
+        <rdfs:domain rdf:resource="http://promsns.org/def/dmn#BusinessRule"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/creationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/creationDate">
+        <rdfs:domain rdf:resource="http://promsns.org/def/dmn#BusinessRule"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/hasAssociatedHitPolicyCriteria -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/hasAssociatedHitPolicyCriteria">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Clause"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/hitCondition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/hitCondition">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Condition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/id">
+        <rdfs:domain rdf:resource="http://promsns.org/def/dmn#BusinessRule"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/inputRef -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/inputRef">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/isCompleteness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/isCompleteness">
+        <rdfs:domain rdf:resource="http://promsns.org/def/dmn#BusinessRule"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/isCompletenessClause -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/isCompletenessClause">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Clause"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/isCompletenessCondition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/isCompletenessCondition">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Condition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/isCompletenessField -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/isCompletenessField">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Field"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/isCorrect -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/isCorrect">
+        <rdfs:domain rdf:resource="http://promsns.org/def/dmn#BusinessRule"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/name">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Field"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/numberClause -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/numberClause">
+        <rdfs:domain rdf:resource="http://promsns.org/def/dmn#BusinessRule"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/numberCondition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/numberCondition">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Clause"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/rangeMax -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/rangeMax">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/ValueCondition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/rangeMaxField -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/rangeMaxField">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Field"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/rangeMin -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/rangeMin">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/ValueCondition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/rangeMinField -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/rangeMinField">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Field"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/updatedDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/updatedDate">
+        <rdfs:domain rdf:resource="http://promsns.org/def/dmn#BusinessRule"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/valueConditionBoolean -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/valueConditionBoolean">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/ValueCondition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/valueConditionNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/valueConditionNumber">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/ValueCondition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/valueConditionString -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/valueConditionString">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/ValueCondition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/valueResult -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/valueResult">
+        <rdfs:domain rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Clause"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://promsns.org/def/dmn#BusinessRule -->
+
+    <owl:Class rdf:about="http://promsns.org/def/dmn#BusinessRule"/>
+    
+
+
+    <!-- http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass -->
+
+    <owl:Class rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Data -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/DataType -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/DataType"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Enumerate -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Enumerate">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Metadata -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Metadata">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/AnalysisMethod -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/AnalysisMethod">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/QualityMeasurementWay"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/BaseMeasurementMethod -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/BaseMeasurementMethod">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/QualityMeasurementWay"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessOutput -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessOutput"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessRuleDataQualityAssessment -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessRuleDataQualityAssessment">
+        <rdfs:subClassOf rdf:resource="http://promsns.org/def/dmn#BusinessRule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessRuleDataQualityMeasurementDimension -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessRuleDataQualityMeasurementDimension">
+        <rdfs:subClassOf rdf:resource="http://promsns.org/def/dmn#BusinessRule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessRuleDataUsabilityDecision -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessRuleDataUsabilityDecision">
+        <rdfs:subClassOf rdf:resource="http://promsns.org/def/dmn#BusinessRule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessRuleDataValue -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/BusinessRuleDataValue">
+        <rdfs:subClassOf rdf:resource="http://promsns.org/def/dmn#BusinessRule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/CalculationMethod -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/CalculationMethod">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/QualityMeasurementWay"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Clause -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Clause"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Condition -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Condition"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityAssessment -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityAssessment">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/QualityMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityCharacteristic -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityCharacteristic"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityMeasurement -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityMeasurement">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/QualityMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityModel -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityModel"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/DataUsabilityRecomendation -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/DataUsabilityRecomendation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/QualityMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Dataset -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Dataset">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Decision -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Decision"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/DecisionCriteria -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/DecisionCriteria"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Field -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Field">
+        <rdfs:subClassOf rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Operator -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Operator"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Priority -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Priority"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/QualityMeasure -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/QualityMeasure"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/QualityMeasurementWay -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/QualityMeasurementWay"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/ValueCondition -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/ValueCondition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Accuracy -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Accuracy">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/AdequatelyComplete -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/AdequatelyComplete">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Enumerate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Any -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Any">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Priority"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/BetweenValues -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/BetweenValues">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Operator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Boolean -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Boolean">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/CollectCount -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/CollectCount">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Priority"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/CollectSum -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/CollectSum">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Priority"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/CompleteEnough -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/CompleteEnough">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Enumerate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Completeness -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Completeness">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Consistency -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Consistency">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/DataQualityCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Double -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Double">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Equal -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Equal">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Operator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/EqualOrGreater -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/EqualOrGreater">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Operator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/EqualOrSmaller -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/EqualOrSmaller">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Operator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/First -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/First">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Priority"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Function -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Function">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Operator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Greater -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Greater">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Operator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/High -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/High">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Priority"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Integer -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Integer">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Low -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Low">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Priority"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Medium -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Medium">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Priority"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/NotComplete -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/NotComplete">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Enumerate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Number -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Number">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Smaller -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Smaller">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Operator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/String -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/String">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/Unique -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/Unique">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Priority"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/VeryHigh -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/VeryHigh">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Priority"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl4dq/VeryLow -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologies.khaos.uma.es/bigowl4dq/VeryLow">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl4dq/Priority"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
