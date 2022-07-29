@@ -1,0 +1,3235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BIGOWL4DQ Ontology</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg==">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1Sew
+EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+        #pylode {
+            position: fixed;
+            top: 130px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-con,
+        .sup-col {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-con {
+            color:orange;
+        }
+
+        .sup-col {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+        /* less prominent links for properties */
+        .proplink {
+            color: #336;
+            text-decoration: none;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+      [
+  {
+    "@id": "https://w3id.org/BIGOWL4DQ",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "<p>BIGOW4DQL, has been designed and implemented for a comprehensive solution that integrates and appropriately relates the measurement, assessment, and creation of a suggestion for using data through business rules..</p>"
+      }
+    ],
+    "https://schema.org/license": [
+      {
+        "@id": "https://opensource.org/licenses/MIT"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "BIGOWL4DQ Ontology"
+      }
+    ],
+    "https://schema.org/rights": [
+      {
+        "@value": "Aether"
+      }
+    ]
+  }
+]
+    </script>
+</head>
+<body>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.13.2</span>
+  </div>
+  <h1>BIGOWL4DQ Ontology</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>URI</dt>
+        <dd><code>https://w3id.org/BIGOWL4DQ</code></dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher">Publisher</a>(s)</dt>
+        <dd>
+            Aether Group<br/>
+        </dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator">Creator</a>(s)</dt>
+        <dd>
+            Aether Group<br/>
+        </dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/created">Created</a></dt>
+        <dd>2022-07-14T09:00:00</dd>
+        <dt>Version URI</dt>
+        <dd><a href="https://w3id.org/BIGOWL4DQ">https://w3id.org/BIGOWL4DQ</a></dd>
+        <dt>License &amp; Rights</dt>
+        <dd>
+            <a href="https://opensource.org/licenses/MIT">https://opensource.org/licenses/MIT</a><br />
+            Aether
+        </dd>
+        <dt>Ontology RDF</dt>
+        <dd><a href="bigowl4dq.owl">RDF (xml)</a></dd>
+    </dl>
+    <h2>Description</h2>
+    <div id="description">
+        <p>BIGOW4DQL, has been designed and implemented for a comprehensive solution that integrates and appropriately relates the measurement, assessment, and creation of a suggestion for using data through business rules..</p>
+    </div>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#datatypeproperties">Datatype Properties</a></li>
+        <li><a href="#namedindividuals">Named Individuals</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#legend">Legend</a></li>
+    </ol>
+</section>
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <div style="width:500px; height:50px; background-color: lightgrey; border:solid 2px grey; padding:10px;margin-bottom:5px; text-align:center;">Pictures say 1,000 words</div>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
+  <section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+      <li><a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a></li>
+      <li><a href="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass">http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass</a></li>
+      <li><a href="#AnalysisMethod">AnalysisMethod</a></li>
+      <li><a href="#BaseMeasurementMethod">BaseMeasurementMethod</a></li>
+      <li><a href="#BusinessOutput">BusinessOutput</a></li>
+      <li><a href="#BusinessRuleDataQualityAssessment">BusinessRuleDataQualityAssessment</a></li>
+      <li><a href="#BusinessRuleDataQualityMeasurementDimension">BusinessRuleDataQualityMeasurementDimension</a></li>
+      <li><a href="#BusinessRuleDataUsabilityDecision">BusinessRuleDataUsabilityDecision</a></li>
+      <li><a href="#BusinessRuleDataValue">BusinessRuleDataValue</a></li>
+      <li><a href="#CalculationMethod">CalculationMethod</a></li>
+      <li><a href="#Clause">Clause</a></li>
+      <li><a href="#Condition">Condition</a></li>
+      <li><a href="#DataQualityAssessment">DataQualityAssessment</a></li>
+      <li><a href="#DataQualityCharacteristic">DataQualityCharacteristic</a></li>
+      <li><a href="#DataQualityMeasurement">DataQualityMeasurement</a></li>
+      <li><a href="#DataQualityModel">DataQualityModel</a></li>
+      <li><a href="#DataUsabilityRecomendation">DataUsabilityRecomendation</a></li>
+      <li><a href="#Dataset">Dataset</a></li>
+      <li><a href="#Decision">Decision</a></li>
+      <li><a href="#DecisionCriteria">DecisionCriteria</a></li>
+      <li><a href="#Field">Field</a></li>
+      <li><a href="#Operator">Operator</a></li>
+      <li><a href="#Priority">Priority</a></li>
+      <li><a href="#QualityMeasure">QualityMeasure</a></li>
+      <li><a href="#QualityMeasurementWay">QualityMeasurementWay</a></li>
+      <li><a href="#ValueCondition">ValueCondition</a></li>
+      <li><a href="https://w3id.org/BIGOWLData/Data">https://w3id.org/BIGOWLData/Data</a></li>
+      <li><a href="https://w3id.org/BIGOWLData/DataType">https://w3id.org/BIGOWLData/DataType</a></li>
+      <li><a href="https://w3id.org/BIGOWLData/Enumerate">https://w3id.org/BIGOWLData/Enumerate</a></li>
+      <li><a href="https://w3id.org/BIGOWLData/Metadata">https://w3id.org/BIGOWLData/Metadata</a></li>
+      <li><a href="https://w3id.org/BIGOWLData/PrimitiveType">https://w3id.org/BIGOWLData/PrimitiveType</a></li>
+    </ul>
+    <div class="entity class" id="BusinessRule">
+        <h3>
+          BusinessRule<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#BusinessRule" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://promsns.org/def/dmn#BusinessRule</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#BusinessRuleDataUsabilityDecision">BusinessRuleDataUsabilityDecision</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#BusinessRuleDataQualityAssessment">BusinessRuleDataQualityAssessment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#BusinessRuleDataValue">BusinessRuleDataValue</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#BusinessRuleDataQualityMeasurementDimension">BusinessRuleDataQualityMeasurementDimension</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#inputDomain">inputDomain</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isCorrect">isCorrect</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#hasHitPolicy">hasHitPolicy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#updatedDate">updatedDate</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#id">id</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#outputDomain">outputDomain</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#businessRulesSource">businessRulesSource</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#hasClause">hasClause</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#numberClause">numberClause</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#isComplete">isComplete</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#creationDate">creationDate</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#isCharacterizedBy">isCharacterizedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isRelatedTo">isRelatedTo</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isProducedByConsidering">isProducedByConsidering</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="DataSetClass">
+        <h3>
+          DataSetClass<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#DataSetClass" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWLData/Data">https://w3id.org/BIGOWLData/Data</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="AnalysisMethod">
+        <h3>
+          AnalysisMethod<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#AnalysisMethod" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/AnalysisMethod</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#QualityMeasurementWay">QualityMeasurementWay</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="BaseMeasurementMethod">
+        <h3>
+          BaseMeasurementMethod<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#BaseMeasurementMethod" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/BaseMeasurementMethod</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#QualityMeasurementWay">QualityMeasurementWay</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="BusinessOutput">
+        <h3>
+          BusinessOutput<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#BusinessOutput" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/BusinessOutput</code></td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#domain">domain</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#outputResult">outputResult</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="BusinessRuleDataQualityAssessment">
+        <h3>
+          BusinessRuleDataQualityAssessment<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#BusinessRuleDataQualityAssessment" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/BusinessRuleDataQualityAssessment</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#needsAsInputForAssessment">needsAsInputForAssessment</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#generatesAsAssessmentOutput">generatesAsAssessmentOutput</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="BusinessRuleDataQualityMeasurementDimension">
+        <h3>
+          BusinessRuleDataQualityMeasurementDimension<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#BusinessRuleDataQualityMeasurementDimension" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/BusinessRuleDataQualityMeasurementDimension</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#isAimedByMeasuring">isAimedByMeasuring</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#generatesAsMeasurementOutput">generatesAsMeasurementOutput</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="BusinessRuleDataUsabilityDecision">
+        <h3>
+          BusinessRuleDataUsabilityDecision<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#BusinessRuleDataUsabilityDecision" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/BusinessRuleDataUsabilityDecision</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#hasCriteriaDecision">hasCriteriaDecision</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#needsAsInputForDataUsabilityRecommendation">needsAsInputForDataUsabilityRecommendation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#generatesAsDataUsabilityRecommendationOuput">generatesAsDataUsabilityRecommendationOuput</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="BusinessRuleDataValue">
+        <h3>
+          BusinessRuleDataValue<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#BusinessRuleDataValue" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/BusinessRuleDataValue</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#inputRef">inputRef</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#needsAsInputForMeasurement">needsAsInputForMeasurement</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="CalculationMethod">
+        <h3>
+          CalculationMethod<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#CalculationMethod" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/CalculationMethod</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#QualityMeasurementWay">QualityMeasurementWay</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Clause">
+        <h3>
+          Clause<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Clause" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/Clause</code></td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#hasAssociatedHitPolicyCriteria">hasAssociatedHitPolicyCriteria</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#numberCondition">numberCondition</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#hasCondition">hasCondition</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#annotation">annotation</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#isCompleteClause">isCompleteClause</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#valueEnumerateResult">valueEnumerateResult</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#outputClause">outputClause</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#valueResult">valueResult</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#hasClause">hasClause</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Condition">
+        <h3>
+          Condition<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Condition" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/Condition</code></td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#hasValueCondition">hasValueCondition</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#inputDomainCondition">inputDomainCondition</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isCompleteCondition">isCompleteCondition</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#isRelatedTo">isRelatedTo</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hitCondition">hitCondition</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#hasCondition">hasCondition</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="DataQualityAssessment">
+        <h3>
+          DataQualityAssessment<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#DataQualityAssessment" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/DataQualityAssessment</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#QualityMeasure">QualityMeasure</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#needsAsInputForAssessment">needsAsInputForAssessment</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#includes">includes</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#generatesAsAssessmentOutput">generatesAsAssessmentOutput</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="DataQualityCharacteristic">
+        <h3>
+          DataQualityCharacteristic<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#DataQualityCharacteristic" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/DataQualityCharacteristic</code></td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#isMeasuredBy">isMeasuredBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#includes">includes</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#groups">groups</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isAimedByMeasuring">isAimedByMeasuring</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/Accuracy">https://w3id.org/BIGOWL4DQ/Accuracy</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/Completeness">https://w3id.org/BIGOWL4DQ/Completeness</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/Consistency">https://w3id.org/BIGOWL4DQ/Consistency</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="DataQualityMeasurement">
+        <h3>
+          DataQualityMeasurement<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#DataQualityMeasurement" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/DataQualityMeasurement</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#QualityMeasure">QualityMeasure</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#needsAsInputForMeasurement">needsAsInputForMeasurement</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#generatesAsMeasurementOutput">generatesAsMeasurementOutput</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#isMeasuredBy">isMeasuredBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="DataQualityModel">
+        <h3>
+          DataQualityModel<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#DataQualityModel" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/DataQualityModel</code></td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#groups">groups</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#isDefinedAccordingTo">isDefinedAccordingTo</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="DataUsabilityRecomendation">
+        <h3>
+          DataUsabilityRecomendation<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#DataUsabilityRecomendation" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/DataUsabilityRecomendation</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#QualityMeasure">QualityMeasure</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#generatesAsDataUsabilityRecommendationOuput">generatesAsDataUsabilityRecommendationOuput</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#needsAsInputForDataUsabilityRecommendation">needsAsInputForDataUsabilityRecommendation</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#hasAssociated">hasAssociated</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Dataset">
+        <h3>
+          Dataset<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Dataset" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/Dataset</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWLData/Data">https://w3id.org/BIGOWLData/Data</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#hasField">hasField</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isQualifiedBy">isQualifiedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasAssociated">hasAssociated</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Decision">
+        <h3>
+          Decision<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Decision" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/Decision</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="DecisionCriteria">
+        <h3>
+          DecisionCriteria<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#DecisionCriteria" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/DecisionCriteria</code></td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#isCharacterizedBy">isCharacterizedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#hasCriteriaDecision">hasCriteriaDecision</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#involves">involves</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Field">
+        <h3>
+          Field<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Field" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/Field</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWLData/Data">https://w3id.org/BIGOWLData/Data</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#rangeMaxField">rangeMaxField</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#hasFieldDomain">hasFieldDomain</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isCompleteField">isCompleteField</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#rangeMinField">rangeMinField</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#name">name</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#inputRef">inputRef</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasField">hasField</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Operator">
+        <h3>
+          Operator<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Operator" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/Operator</code></td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#hasOperator">hasOperator</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/Function">https://w3id.org/BIGOWL4DQ/Function</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/BetweenValues">https://w3id.org/BIGOWL4DQ/BetweenValues</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/Equal">https://w3id.org/BIGOWL4DQ/Equal</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/EqualOrSmaller">https://w3id.org/BIGOWL4DQ/EqualOrSmaller</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/Greater">https://w3id.org/BIGOWL4DQ/Greater</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/Smaller">https://w3id.org/BIGOWL4DQ/Smaller</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/EqualOrGreater">https://w3id.org/BIGOWL4DQ/EqualOrGreater</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Priority">
+        <h3>
+          Priority<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Priority" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/Priority</code></td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#hasHitPolicy">hasHitPolicy</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/VeryHigh">https://w3id.org/BIGOWL4DQ/VeryHigh</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/CollectSum">https://w3id.org/BIGOWL4DQ/CollectSum</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/Any">https://w3id.org/BIGOWL4DQ/Any</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/Medium">https://w3id.org/BIGOWL4DQ/Medium</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/First">https://w3id.org/BIGOWL4DQ/First</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/Low">https://w3id.org/BIGOWL4DQ/Low</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/CollectCount">https://w3id.org/BIGOWL4DQ/CollectCount</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/VeryLow">https://w3id.org/BIGOWL4DQ/VeryLow</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/Unique">https://w3id.org/BIGOWL4DQ/Unique</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/High">https://w3id.org/BIGOWL4DQ/High</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="QualityMeasure">
+        <h3>
+          QualityMeasure<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#QualityMeasure" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/QualityMeasure</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#DataQualityAssessment">DataQualityAssessment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#DataQualityMeasurement">DataQualityMeasurement</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#DataUsabilityRecomendation">DataUsabilityRecomendation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#isDefinedAccordingTo">isDefinedAccordingTo</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#isProducedByConsidering">isProducedByConsidering</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#isQualifiedBy">isQualifiedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#generates">generates</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="QualityMeasurementWay">
+        <h3>
+          QualityMeasurementWay<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#QualityMeasurementWay" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/QualityMeasurementWay</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#AnalysisMethod">AnalysisMethod</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#CalculationMethod">CalculationMethod</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#BaseMeasurementMethod">BaseMeasurementMethod</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#generates">generates</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#involves">involves</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ValueCondition">
+        <h3>
+          ValueCondition<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#ValueCondition" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/ValueCondition</code></td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#valueConditionString">valueConditionString</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#hasOperator">hasOperator</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#valueConditionNumber">valueConditionNumber</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#rangeMin">rangeMin</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#domainValueCondition">domainValueCondition</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#rangeMax">rangeMax</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#valueConditionBoolean">valueConditionBoolean</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#hasValueCondition">hasValueCondition</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Data">
+        <h3>
+          Data<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Data" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWLData/Data</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#Field">Field</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Dataset">Dataset</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass">http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetClass</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/BIGOWLData/Metadata">https://w3id.org/BIGOWLData/Metadata</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#isDescribedByMeansOf">isDescribedByMeansOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="DataType">
+        <h3>
+          DataType<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#DataType" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWLData/DataType</code></td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWLData/PrimitiveType">https://w3id.org/BIGOWLData/PrimitiveType</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#outputClause">outputClause</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasDataType">hasDataType</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Enumerate">
+        <h3>
+          Enumerate<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Enumerate" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWLData/Enumerate</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWLData/PrimitiveType">https://w3id.org/BIGOWLData/PrimitiveType</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#valueEnumerateResult">valueEnumerateResult</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/CompleteEnough">https://w3id.org/BIGOWL4DQ/CompleteEnough</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/AdequatelyComplete">https://w3id.org/BIGOWL4DQ/AdequatelyComplete</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/NotComplete">https://w3id.org/BIGOWL4DQ/NotComplete</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Metadata">
+        <h3>
+          Metadata<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Metadata" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWLData/Metadata</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWLData/Data">https://w3id.org/BIGOWLData/Data</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#isDescribedByMeansOf">isDescribedByMeansOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="PrimitiveType">
+        <h3>
+          PrimitiveType<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#PrimitiveType" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWLData/PrimitiveType</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWLData/DataType">https://w3id.org/BIGOWLData/DataType</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWLData/Enumerate">https://w3id.org/BIGOWLData/Enumerate</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#domainValueCondition">domainValueCondition</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#outputDomain">outputDomain</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasFieldDomain">hasFieldDomain</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/Double">https://w3id.org/BIGOWL4DQ/Double</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/String">https://w3id.org/BIGOWL4DQ/String</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/Number">https://w3id.org/BIGOWL4DQ/Number</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/Integer">https://w3id.org/BIGOWL4DQ/Integer</a><br/>
+                    <a href="https://w3id.org/BIGOWL4DQ/Boolean">https://w3id.org/BIGOWL4DQ/Boolean</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#domain">domain</a></li>
+        <li><a href="#domainValueCondition">domainValueCondition</a></li>
+        <li><a href="#generates">generates</a></li>
+        <li><a href="#generatesAsAssessmentOutput">generatesAsAssessmentOutput</a></li>
+        <li><a href="#generatesAsDataUsabilityRecommendationOuput">generatesAsDataUsabilityRecommendationOuput</a></li>
+        <li><a href="#generatesAsMeasurementOutput">generatesAsMeasurementOutput</a></li>
+        <li><a href="#groups">groups</a></li>
+        <li><a href="#hasAssociated">hasAssociated</a></li>
+        <li><a href="#hasClause">hasClause</a></li>
+        <li><a href="#hasCondition">hasCondition</a></li>
+        <li><a href="#hasCriteriaDecision">hasCriteriaDecision</a></li>
+        <li><a href="#hasDataType">hasDataType</a></li>
+        <li><a href="#hasField">hasField</a></li>
+        <li><a href="#hasFieldDomain">hasFieldDomain</a></li>
+        <li><a href="#hasHitPolicy">hasHitPolicy</a></li>
+        <li><a href="#hasOperator">hasOperator</a></li>
+        <li><a href="#hasValueCondition">hasValueCondition</a></li>
+        <li><a href="#includes">includes</a></li>
+        <li><a href="#inputDomain">inputDomain</a></li>
+        <li><a href="#inputDomainCondition">inputDomainCondition</a></li>
+        <li><a href="#inputRef">inputRef</a></li>
+        <li><a href="#involves">involves</a></li>
+        <li><a href="#isAimedByMeasuring">isAimedByMeasuring</a></li>
+        <li><a href="#isCharacterizedBy">isCharacterizedBy</a></li>
+        <li><a href="#isDefinedAccordingTo">isDefinedAccordingTo</a></li>
+        <li><a href="#isDescribedByMeansOf">isDescribedByMeansOf</a></li>
+        <li><a href="#isMeasuredBy">isMeasuredBy</a></li>
+        <li><a href="#isProducedByConsidering">isProducedByConsidering</a></li>
+        <li><a href="#isQualifiedBy">isQualifiedBy</a></li>
+        <li><a href="#isRelatedTo">isRelatedTo</a></li>
+        <li><a href="#needsAsInputForAssessment">needsAsInputForAssessment</a></li>
+        <li><a href="#needsAsInputForDataUsabilityRecommendation">needsAsInputForDataUsabilityRecommendation</a></li>
+        <li><a href="#needsAsInputForMeasurement">needsAsInputForMeasurement</a></li>
+        <li><a href="#outputClause">outputClause</a></li>
+        <li><a href="#outputDomain">outputDomain</a></li>
+        <li><a href="#outputResult">outputResult</a></li>
+        <li><a href="#valueEnumerateResult">valueEnumerateResult</a></li>
+    </ul>
+    <div class="entity property" id="domain">
+        <h3>domain<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#domain" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/domain</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#BusinessOutput">BusinessOutput</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    https://w3id.org/BIGOWLData/PrimitiveType
+                    https://w3id.org/BIGOWL4DQ/BusinessOutput
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="domainValueCondition">
+        <h3>domainValueCondition<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#domainValueCondition" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/domainValueCondition</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#ValueCondition">ValueCondition</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWLData/PrimitiveType">https://w3id.org/BIGOWLData/PrimitiveType</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="generates">
+        <h3>generates<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#generates" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/generates</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#QualityMeasurementWay">QualityMeasurementWay</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/QualityMeasure">https://w3id.org/BIGOWL4DQ/QualityMeasure</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="generatesAsAssessmentOutput">
+        <h3>generatesAsAssessmentOutput<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#generatesAsAssessmentOutput" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/generatesAsAssessmentOutput</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#DataQualityAssessment">DataQualityAssessment</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/BusinessRuleDataQualityAssessment">https://w3id.org/BIGOWL4DQ/BusinessRuleDataQualityAssessment</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="generatesAsDataUsabilityRecommendationOuput">
+        <h3>generatesAsDataUsabilityRecommendationOuput<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#generatesAsDataUsabilityRecommendationOuput" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/generatesAsDataUsabilityRecommendationOuput</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#DataUsabilityRecomendation">DataUsabilityRecomendation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/BusinessRuleDataUsabilityDecision">https://w3id.org/BIGOWL4DQ/BusinessRuleDataUsabilityDecision</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="generatesAsMeasurementOutput">
+        <h3>generatesAsMeasurementOutput<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#generatesAsMeasurementOutput" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/generatesAsMeasurementOutput</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#DataQualityMeasurement">DataQualityMeasurement</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/BusinessRuleDataQualityMeasurementDimension">https://w3id.org/BIGOWL4DQ/BusinessRuleDataQualityMeasurementDimension</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="groups">
+        <h3>groups<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#groups" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/groups</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#DataQualityModel">DataQualityModel</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/DataQualityCharacteristic">https://w3id.org/BIGOWL4DQ/DataQualityCharacteristic</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasAssociated">
+        <h3>hasAssociated<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasAssociated" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/hasAssociated</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Dataset">Dataset</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/DataUsabilityRecomendation">https://w3id.org/BIGOWL4DQ/DataUsabilityRecomendation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasClause">
+        <h3>hasClause<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasClause" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/hasClause</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/Clause">https://w3id.org/BIGOWL4DQ/Clause</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasCondition">
+        <h3>hasCondition<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasCondition" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/hasCondition</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Clause">Clause</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/Condition">https://w3id.org/BIGOWL4DQ/Condition</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasCriteriaDecision">
+        <h3>hasCriteriaDecision<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasCriteriaDecision" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/hasCriteriaDecision</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#BusinessRuleDataUsabilityDecision">BusinessRuleDataUsabilityDecision</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/DecisionCriteria">https://w3id.org/BIGOWL4DQ/DecisionCriteria</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasDataType">
+        <h3>hasDataType<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasDataType" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/hasDataType</code></td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWLData/DataType">https://w3id.org/BIGOWLData/DataType</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasField">
+        <h3>hasField<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasField" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/hasField</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Dataset">Dataset</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/Field">https://w3id.org/BIGOWL4DQ/Field</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasFieldDomain">
+        <h3>hasFieldDomain<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasFieldDomain" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/hasFieldDomain</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Field">Field</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWLData/PrimitiveType">https://w3id.org/BIGOWLData/PrimitiveType</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasHitPolicy">
+        <h3>hasHitPolicy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasHitPolicy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/hasHitPolicy</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/Priority">https://w3id.org/BIGOWL4DQ/Priority</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasOperator">
+        <h3>hasOperator<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasOperator" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/hasOperator</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#ValueCondition">ValueCondition</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/Operator">https://w3id.org/BIGOWL4DQ/Operator</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasValueCondition">
+        <h3>hasValueCondition<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasValueCondition" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/hasValueCondition</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Condition">Condition</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/ValueCondition">https://w3id.org/BIGOWL4DQ/ValueCondition</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="includes">
+        <h3>includes<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#includes" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/includes</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#DataQualityAssessment">DataQualityAssessment</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/DataQualityCharacteristic">https://w3id.org/BIGOWL4DQ/DataQualityCharacteristic</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="inputDomain">
+        <h3>inputDomain<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#inputDomain" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/inputDomain</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    https://w3id.org/BIGOWLData/PrimitiveType
+                    https://w3id.org/BIGOWL4DQ/BusinessOutput
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="inputDomainCondition">
+        <h3>inputDomainCondition<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#inputDomainCondition" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/inputDomainCondition</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Condition">Condition</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    https://w3id.org/BIGOWLData/PrimitiveType
+                    https://w3id.org/BIGOWL4DQ/BusinessOutput
+                    https://w3id.org/BIGOWL4DQ/Field
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="inputRef">
+        <h3>inputRef<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#inputRef" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/inputRef</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#BusinessRuleDataValue">BusinessRuleDataValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/Field">https://w3id.org/BIGOWL4DQ/Field</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="involves">
+        <h3>involves<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#involves" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/involves</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#QualityMeasurementWay">QualityMeasurementWay</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/DecisionCriteria">https://w3id.org/BIGOWL4DQ/DecisionCriteria</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isAimedByMeasuring">
+        <h3>isAimedByMeasuring<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isAimedByMeasuring" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/isAimedByMeasuring</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#BusinessRuleDataQualityMeasurementDimension">BusinessRuleDataQualityMeasurementDimension</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/DataQualityCharacteristic">https://w3id.org/BIGOWL4DQ/DataQualityCharacteristic</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isCharacterizedBy">
+        <h3>isCharacterizedBy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isCharacterizedBy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/isCharacterizedBy</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#DecisionCriteria">DecisionCriteria</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isDefinedAccordingTo">
+        <h3>isDefinedAccordingTo<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isDefinedAccordingTo" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/isDefinedAccordingTo</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#QualityMeasure">QualityMeasure</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/DataQualityModel">https://w3id.org/BIGOWL4DQ/DataQualityModel</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isDescribedByMeansOf">
+        <h3>isDescribedByMeansOf<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isDescribedByMeansOf" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/isDescribedByMeansOf</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWLData/Data">https://w3id.org/BIGOWLData/Data</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWLData/Metadata">https://w3id.org/BIGOWLData/Metadata</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isMeasuredBy">
+        <h3>isMeasuredBy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isMeasuredBy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/isMeasuredBy</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#DataQualityCharacteristic">DataQualityCharacteristic</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/DataQualityMeasurement">https://w3id.org/BIGOWL4DQ/DataQualityMeasurement</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isProducedByConsidering">
+        <h3>isProducedByConsidering<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isProducedByConsidering" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/isProducedByConsidering</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#QualityMeasure">QualityMeasure</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isQualifiedBy">
+        <h3>isQualifiedBy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isQualifiedBy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/isQualifiedBy</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Dataset">Dataset</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/QualityMeasure">https://w3id.org/BIGOWL4DQ/QualityMeasure</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isRelatedTo">
+        <h3>isRelatedTo<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isRelatedTo" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/isRelatedTo</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Condition">Condition</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="needsAsInputForAssessment">
+        <h3>needsAsInputForAssessment<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#needsAsInputForAssessment" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/needsAsInputForAssessment</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#DataQualityAssessment">DataQualityAssessment</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/BusinessRuleDataQualityAssessment">https://w3id.org/BIGOWL4DQ/BusinessRuleDataQualityAssessment</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="needsAsInputForDataUsabilityRecommendation">
+        <h3>needsAsInputForDataUsabilityRecommendation<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#needsAsInputForDataUsabilityRecommendation" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/needsAsInputForDataUsabilityRecommendation</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#DataUsabilityRecomendation">DataUsabilityRecomendation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/BusinessRuleDataUsabilityDecision">https://w3id.org/BIGOWL4DQ/BusinessRuleDataUsabilityDecision</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="needsAsInputForMeasurement">
+        <h3>needsAsInputForMeasurement<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#needsAsInputForMeasurement" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/needsAsInputForMeasurement</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#DataQualityMeasurement">DataQualityMeasurement</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/BusinessRuleDataValue">https://w3id.org/BIGOWL4DQ/BusinessRuleDataValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="outputClause">
+        <h3>outputClause<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#outputClause" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/outputClause</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Clause">Clause</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWLData/DataType">https://w3id.org/BIGOWLData/DataType</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="outputDomain">
+        <h3>outputDomain<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#outputDomain" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/outputDomain</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWLData/PrimitiveType">https://w3id.org/BIGOWLData/PrimitiveType</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="outputResult">
+        <h3>outputResult<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#outputResult" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/outputResult</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup> or <a href="#Clause">Clause</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWL4DQ/BusinessOutput">https://w3id.org/BIGOWL4DQ/BusinessOutput</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="valueEnumerateResult">
+        <h3>valueEnumerateResult<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#valueEnumerateResult" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/valueEnumerateResult</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Clause">Clause</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/BIGOWLData/Enumerate">https://w3id.org/BIGOWLData/Enumerate</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="datatypeproperties">
+    <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#annotation">annotation</a></li>
+        <li><a href="#businessRulesSource">businessRulesSource</a></li>
+        <li><a href="#creationDate">creationDate</a></li>
+        <li><a href="#hasAssociatedHitPolicyCriteria">hasAssociatedHitPolicyCriteria</a></li>
+        <li><a href="#hitCondition">hitCondition</a></li>
+        <li><a href="#id">id</a></li>
+        <li><a href="#isComplete">isComplete</a></li>
+        <li><a href="#isCompleteClause">isCompleteClause</a></li>
+        <li><a href="#isCompleteCondition">isCompleteCondition</a></li>
+        <li><a href="#isCompleteField">isCompleteField</a></li>
+        <li><a href="#isCorrect">isCorrect</a></li>
+        <li><a href="#name">name</a></li>
+        <li><a href="#numberClause">numberClause</a></li>
+        <li><a href="#numberCondition">numberCondition</a></li>
+        <li><a href="#rangeMax">rangeMax</a></li>
+        <li><a href="#rangeMaxField">rangeMaxField</a></li>
+        <li><a href="#rangeMin">rangeMin</a></li>
+        <li><a href="#rangeMinField">rangeMinField</a></li>
+        <li><a href="#updatedDate">updatedDate</a></li>
+        <li><a href="#valueConditionBoolean">valueConditionBoolean</a></li>
+        <li><a href="#valueConditionNumber">valueConditionNumber</a></li>
+        <li><a href="#valueConditionString">valueConditionString</a></li>
+        <li><a href="#valueResult">valueResult</a></li>
+    </ul>
+    <div class="entity property" id="annotation">
+        <h3>annotation<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#annotation" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/annotation</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Clause">Clause</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="businessRulesSource">
+        <h3>businessRulesSource<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#businessRulesSource" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/businessRulesSource</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="creationDate">
+        <h3>creationDate<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#creationDate" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/creationDate</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasAssociatedHitPolicyCriteria">
+        <h3>hasAssociatedHitPolicyCriteria<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasAssociatedHitPolicyCriteria" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/hasAssociatedHitPolicyCriteria</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Clause">Clause</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#int">xsd:int</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hitCondition">
+        <h3>hitCondition<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hitCondition" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/hitCondition</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Condition">Condition</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#int">xsd:int</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="id">
+        <h3>id<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#id" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/id</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isComplete">
+        <h3>isComplete<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isComplete" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/isComplete</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isCompleteClause">
+        <h3>isCompleteClause<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isCompleteClause" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/isCompleteClause</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Clause">Clause</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isCompleteCondition">
+        <h3>isCompleteCondition<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isCompleteCondition" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/isCompleteCondition</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Condition">Condition</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isCompleteField">
+        <h3>isCompleteField<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isCompleteField" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/isCompleteField</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Field">Field</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isCorrect">
+        <h3>isCorrect<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isCorrect" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/isCorrect</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="name">
+        <h3>name<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#name" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/name</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Field">Field</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="numberClause">
+        <h3>numberClause<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#numberClause" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/numberClause</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#int">xsd:int</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="numberCondition">
+        <h3>numberCondition<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#numberCondition" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/numberCondition</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Clause">Clause</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#int">xsd:int</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="rangeMax">
+        <h3>rangeMax<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#rangeMax" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/rangeMax</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#ValueCondition">ValueCondition</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#double">xsd:double</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="rangeMaxField">
+        <h3>rangeMaxField<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#rangeMaxField" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/rangeMaxField</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Field">Field</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#double">xsd:double</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="rangeMin">
+        <h3>rangeMin<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#rangeMin" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/rangeMin</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#ValueCondition">ValueCondition</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#double">xsd:double</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="rangeMinField">
+        <h3>rangeMinField<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#rangeMinField" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/rangeMinField</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Field">Field</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#double">xsd:double</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="updatedDate">
+        <h3>updatedDate<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#updatedDate" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/updatedDate</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://promsns.org/def/dmn#BusinessRule">http://promsns.org/def/dmn#BusinessRule</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="valueConditionBoolean">
+        <h3>valueConditionBoolean<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#valueConditionBoolean" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/valueConditionBoolean</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#ValueCondition">ValueCondition</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="valueConditionNumber">
+        <h3>valueConditionNumber<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#valueConditionNumber" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/valueConditionNumber</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#ValueCondition">ValueCondition</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#double">xsd:double</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="valueConditionString">
+        <h3>valueConditionString<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#valueConditionString" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/valueConditionString</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#ValueCondition">ValueCondition</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="valueResult">
+        <h3>valueResult<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#valueResult" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/BIGOWL4DQ/valueResult</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Clause">Clause</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+  
+    <section id="namedindividuals">
+        <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+        <ul class="hlist">
+            <li><a href="#Accuracy">Accuracy</a></li>
+            <li><a href="#AdequatelyComplete">AdequatelyComplete</a></li>
+            <li><a href="#Any">Any</a></li>
+            <li><a href="#BetweenValues">BetweenValues</a></li>
+            <li><a href="#Boolean">Boolean</a></li>
+            <li><a href="#CollectCount">CollectCount</a></li>
+            <li><a href="#CollectSum">CollectSum</a></li>
+            <li><a href="#CompleteEnough">CompleteEnough</a></li>
+            <li><a href="#Completeness">Completeness</a></li>
+            <li><a href="#Consistency">Consistency</a></li>
+            <li><a href="#Double">Double</a></li>
+            <li><a href="#Equal">Equal</a></li>
+            <li><a href="#EqualOrGreater">EqualOrGreater</a></li>
+            <li><a href="#EqualOrSmaller">EqualOrSmaller</a></li>
+            <li><a href="#First">First</a></li>
+            <li><a href="#Function">Function</a></li>
+            <li><a href="#Greater">Greater</a></li>
+            <li><a href="#High">High</a></li>
+            <li><a href="#Integer">Integer</a></li>
+            <li><a href="#Low">Low</a></li>
+            <li><a href="#Medium">Medium</a></li>
+            <li><a href="#NotComplete">NotComplete</a></li>
+            <li><a href="#Number">Number</a></li>
+            <li><a href="#Smaller">Smaller</a></li>
+            <li><a href="#String">String</a></li>
+            <li><a href="#Unique">Unique</a></li>
+            <li><a href="#VeryHigh">VeryHigh</a></li>
+            <li><a href="#VeryLow">VeryLow</a></li>
+        </ul>
+            <div class="entity named_individual" id="Accuracy">
+        <h3>Accuracy<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/Accuracy
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/DataQualityCharacteristic">https://w3id.org/BIGOWL4DQ/DataQualityCharacteristic</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="AdequatelyComplete">
+        <h3>AdequatelyComplete<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/AdequatelyComplete
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWLData/Enumerate">https://w3id.org/BIGOWLData/Enumerate</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Any">
+        <h3>Any<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/Any
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/Priority">https://w3id.org/BIGOWL4DQ/Priority</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="BetweenValues">
+        <h3>BetweenValues<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/BetweenValues
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/Operator">https://w3id.org/BIGOWL4DQ/Operator</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Boolean">
+        <h3>Boolean<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/Boolean
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWLData/PrimitiveType">https://w3id.org/BIGOWLData/PrimitiveType</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="CollectCount">
+        <h3>CollectCount<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/CollectCount
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/Priority">https://w3id.org/BIGOWL4DQ/Priority</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="CollectSum">
+        <h3>CollectSum<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/CollectSum
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/Priority">https://w3id.org/BIGOWL4DQ/Priority</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="CompleteEnough">
+        <h3>CompleteEnough<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/CompleteEnough
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWLData/Enumerate">https://w3id.org/BIGOWLData/Enumerate</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Completeness">
+        <h3>Completeness<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/Completeness
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/DataQualityCharacteristic">https://w3id.org/BIGOWL4DQ/DataQualityCharacteristic</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Consistency">
+        <h3>Consistency<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/Consistency
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/DataQualityCharacteristic">https://w3id.org/BIGOWL4DQ/DataQualityCharacteristic</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Double">
+        <h3>Double<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/Double
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWLData/PrimitiveType">https://w3id.org/BIGOWLData/PrimitiveType</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Equal">
+        <h3>Equal<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/Equal
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/Operator">https://w3id.org/BIGOWL4DQ/Operator</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="EqualOrGreater">
+        <h3>EqualOrGreater<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/EqualOrGreater
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/Operator">https://w3id.org/BIGOWL4DQ/Operator</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="EqualOrSmaller">
+        <h3>EqualOrSmaller<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/EqualOrSmaller
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/Operator">https://w3id.org/BIGOWL4DQ/Operator</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="First">
+        <h3>First<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/First
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/Priority">https://w3id.org/BIGOWL4DQ/Priority</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Function">
+        <h3>Function<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/Function
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/Operator">https://w3id.org/BIGOWL4DQ/Operator</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Greater">
+        <h3>Greater<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/Greater
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/Operator">https://w3id.org/BIGOWL4DQ/Operator</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="High">
+        <h3>High<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/High
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/Priority">https://w3id.org/BIGOWL4DQ/Priority</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Integer">
+        <h3>Integer<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/Integer
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWLData/PrimitiveType">https://w3id.org/BIGOWLData/PrimitiveType</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Low">
+        <h3>Low<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/Low
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/Priority">https://w3id.org/BIGOWL4DQ/Priority</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Medium">
+        <h3>Medium<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/Medium
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/Priority">https://w3id.org/BIGOWL4DQ/Priority</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="NotComplete">
+        <h3>NotComplete<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/NotComplete
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWLData/Enumerate">https://w3id.org/BIGOWLData/Enumerate</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Number">
+        <h3>Number<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/Number
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWLData/PrimitiveType">https://w3id.org/BIGOWLData/PrimitiveType</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Smaller">
+        <h3>Smaller<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/Smaller
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/Operator">https://w3id.org/BIGOWL4DQ/Operator</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="String">
+        <h3>String<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/String
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWLData/PrimitiveType">https://w3id.org/BIGOWLData/PrimitiveType</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Unique">
+        <h3>Unique<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/Unique
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/Priority">https://w3id.org/BIGOWL4DQ/Priority</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="VeryHigh">
+        <h3>VeryHigh<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/VeryHigh
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/Priority">https://w3id.org/BIGOWL4DQ/Priority</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="VeryLow">
+        <h3>VeryLow<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://w3id.org/BIGOWL4DQ/VeryLow
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="https://w3id.org/BIGOWL4DQ/Priority">https://w3id.org/BIGOWL4DQ/Priority</a><br/>
+            </dd>
+        </table>
+    </div>
+    </section>
+
+  <section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>default (BIGOWL4DQ)</dt>
+        <dd><code>https://w3id.org/BIGOWL4DQ</code></dd>
+        <dt>:</dt>
+        <dd><code>https://w3id.org/BIGOWL4DQ#</code></dd>
+        <dt>brick</dt>
+        <dd><code>https://brickschema.org/schema/Brick#</code></dd>
+        <dt>csvw</dt>
+        <dd><code>http://www.w3.org/ns/csvw#</code></dd>
+        <dt>dc</dt>
+        <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
+        <dt>dcam</dt>
+        <dd><code>http://purl.org/dc/dcam/</code></dd>
+        <dt>dcat</dt>
+        <dd><code>http://www.w3.org/ns/dcat#</code></dd>
+        <dt>dcmitype</dt>
+        <dd><code>http://purl.org/dc/dcmitype/</code></dd>
+        <dt>dcterms</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>doap</dt>
+        <dd><code>http://usefulinc.com/ns/doap#</code></dd>
+        <dt>foaf</dt>
+        <dd><code>http://xmlns.com/foaf/0.1/</code></dd>
+        <dt>odrl</dt>
+        <dd><code>http://www.w3.org/ns/odrl/2/</code></dd>
+        <dt>org</dt>
+        <dd><code>http://www.w3.org/ns/org#</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>prof</dt>
+        <dd><code>http://www.w3.org/ns/dx/prof/</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>qb</dt>
+        <dd><code>http://purl.org/linked-data/cube#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>sh</dt>
+        <dd><code>http://www.w3.org/ns/shacl#</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>sosa</dt>
+        <dd><code>http://www.w3.org/ns/sosa/</code></dd>
+        <dt>ssn</dt>
+        <dd><code>http://www.w3.org/ns/ssn/</code></dd>
+        <dt>time</dt>
+        <dd><code>http://www.w3.org/2006/time#</code></dd>
+        <dt>vann</dt>
+        <dd><code>http://purl.org/vocab/vann/</code></dd>
+        <dt>void</dt>
+        <dd><code>http://rdfs.org/ns/void#</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+  <section id="legend">
+      <h2>Legend</h2>
+      <table class="entity">
+          <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+          <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+          <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+          <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+          <tr><td><sup class="sup-ap" title="Annotation Properties">ap</sup></td><td>Annotation Properties</td></tr>
+          <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+          <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+      </table>
+  </section>
+</body>
+</html>
