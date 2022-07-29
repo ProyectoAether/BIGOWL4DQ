@@ -7,16 +7,16 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-     xmlns:bigowl="http://www.ontologies.khaos.uma.es/bigowl/"
-     xmlns:bigowl4dq="https://w3id.org/BIGOWL4DQ/"
-     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:schema="https://schema.org/">
+     xmlns:bigowl="http://www.ontologies.khaos.uma.es/bigowl/"
+     xmlns:schema="https://schema.org/"
+     xmlns:bigowl4dq="https://w3id.org/BIGOWL4DQ/">
     <owl:Ontology rdf:about="https://w3id.org/data-quality-smart-farm">
+        <owl:versionIRI rdf:resource="https://w3id.org/data-quality-smart-farm"/>
         <owl:imports rdf:resource="https://w3id.org/BIGOWL4DQ"/>
-		<owl:versionIRI rdf:resource="https://w3id.org/data-quality-smart-farm"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-14T09:00:00</terms:created>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aether Group</terms:creator>
         <terms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Case study of Smart Farm</terms:description>
@@ -46,6 +46,41 @@
     <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
 
     <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Data -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/DataType -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/DataType"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/Enumerate -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/Enumerate"/>
+    
+
+
+    <!-- http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType -->
+
+    <owl:Class rdf:about="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
     
 
 
@@ -313,6 +348,66 @@
     
 
 
+    <!-- https://w3id.org/data-quality-smart-farm/BR03 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/BR03">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessRuleDataValue"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/BIGOWL4DQ/Boolean"/>
+        <bigowl4dq:outputResult rdf:resource="https://w3id.org/data-quality-smart-farm/OutputBR03"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/BR04 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/BR04">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessRuleDataValue"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/BIGOWL4DQ/Integer"/>
+        <bigowl4dq:outputResult rdf:resource="https://w3id.org/data-quality-smart-farm/BR04"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/BR05 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/BR05">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessRuleDataValue"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/BIGOWL4DQ/Integer"/>
+        <bigowl4dq:outputResult rdf:resource="https://w3id.org/data-quality-smart-farm/BR05"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/BR06 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/BR06">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessRuleDataValue"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/BIGOWL4DQ/Integer"/>
+        <bigowl4dq:outputResult rdf:resource="https://w3id.org/data-quality-smart-farm/BR06"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/BR07 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/BR07">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessRuleDataValue"/>
+        <bigowl4dq:outputResult rdf:resource="https://w3id.org/BIGOWL4DQ/Integer"/>
+        <bigowl4dq:outputResult rdf:resource="https://w3id.org/data-quality-smart-farm/BR07"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/BR08 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/BR08">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessRuleDataValue"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/BIGOWL4DQ/Integer"/>
+        <bigowl4dq:outputResult rdf:resource="https://w3id.org/data-quality-smart-farm/BR08"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/data-quality-smart-farm/BR09 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/BR09">
@@ -335,6 +430,64 @@
     
 
 
+    <!-- https://w3id.org/data-quality-smart-farm/BR10 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/BR10">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessRuleDataValue"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/data-quality-smart-farm/Realistic"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/data-quality-smart-farm/Unrealistic"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/data-quality-smart-farm/Unusual"/>
+        <bigowl4dq:outputResult rdf:resource="https://w3id.org/data-quality-smart-farm/OutputBR10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/BR11 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/BR11">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessRuleDataValue"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/data-quality-smart-farm/Realistic"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/data-quality-smart-farm/Unrealistic"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/data-quality-smart-farm/Unusual"/>
+        <bigowl4dq:outputResult rdf:resource="https://w3id.org/data-quality-smart-farm/OutputBR11"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/BR12 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/BR12">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessRuleDataValue"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/data-quality-smart-farm/Realistic"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/data-quality-smart-farm/Unrealistic"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/data-quality-smart-farm/Unusual"/>
+        <bigowl4dq:outputResult rdf:resource="https://w3id.org/data-quality-smart-farm/BR12"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/BR13 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/BR13">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessRuleDataValue"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/data-quality-smart-farm/Realistic"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/data-quality-smart-farm/Unrealistic"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/data-quality-smart-farm/Unusual"/>
+        <bigowl4dq:outputResult rdf:resource="https://w3id.org/data-quality-smart-farm/OutputBR13"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/BRAccuracy -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/BRAccuracy">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessRuleDataQualityMeasurementDimension"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/BIGOWL4DQ/Integer"/>
+        <bigowl4dq:outputResult rdf:resource="https://w3id.org/data-quality-smart-farm/OutputBRAccuracy"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/data-quality-smart-farm/BRCompleteness -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/BRCompleteness">
@@ -348,6 +501,38 @@
         <bigowl4dq:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-06T15:00:00</bigowl4dq:creationDate>
         <bigowl4dq:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BR.Completeness</bigowl4dq:id>
         <bigowl4dq:numberClause rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</bigowl4dq:numberClause>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/BRDQAssessment -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/BRDQAssessment">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessRuleDataQualityAssessment"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/data-quality-smart-farm/BadQuality"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/data-quality-smart-farm/EnoughQuality"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/data-quality-smart-farm/NonUsable"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/data-quality-smart-farm/Suitable"/>
+        <bigowl4dq:outputResult rdf:resource="https://w3id.org/data-quality-smart-farm/OutputBRDQAssessment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/BRDUD -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/BRDUD">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessRuleDataUsabilityDecision"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/data-quality-smart-farm/DoNotUse"/>
+        <bigowl4dq:outputDomain rdf:resource="https://w3id.org/data-quality-smart-farm/Use"/>
+        <bigowl4dq:outputResult rdf:resource="https://w3id.org/data-quality-smart-farm/OutputBRDUD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/BadQuality -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/BadQuality">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Enumerate"/>
     </owl:NamedIndividual>
     
 
@@ -669,6 +854,22 @@
     
 
 
+    <!-- https://w3id.org/data-quality-smart-farm/DoNotUse -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/DoNotUse">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Enumerate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/EnoughQuality -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/EnoughQuality">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Enumerate"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/data-quality-smart-farm/Location -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/Location">
@@ -690,29 +891,18 @@
     
 
 
+    <!-- https://w3id.org/data-quality-smart-farm/NonUsable -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/NonUsable">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Enumerate"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/data-quality-smart-farm/OutputBR01 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/OutputBR01">
-        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
         <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
-        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/Field"/>
-        <rdf:type>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdf:type>
-        <rdf:type>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/Field"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdf:type>
         <bigowl4dq:domain rdf:resource="https://w3id.org/BIGOWL4DQ/Boolean"/>
         <bigowl4dq:isCompleteField rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</bigowl4dq:isCompleteField>
     </owl:NamedIndividual>
@@ -722,28 +912,62 @@
     <!-- https://w3id.org/data-quality-smart-farm/OutputBR02 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/OutputBR02">
-        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
         <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
-        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/Field"/>
-        <rdf:type>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdf:type>
-        <rdf:type>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/Field"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdf:type>
         <bigowl4dq:domain rdf:resource="https://w3id.org/BIGOWL4DQ/Boolean"/>
-        <bigowl4dq:isCompleteField rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</bigowl4dq:isCompleteField>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/OutputBR03 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/OutputBR03">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/BIGOWL4DQ/Boolean"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/OutputBR04 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/OutputBR04">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/BIGOWL4DQ/Integer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/OutputBR05 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/OutputBR05">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/BIGOWL4DQ/Integer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/OutputBR06 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/OutputBR06">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/BIGOWL4DQ/Integer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/OutputBR07 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/OutputBR07">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/BIGOWL4DQ/Integer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/OutputBR08 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/OutputBR08">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/BIGOWL4DQ/Integer"/>
     </owl:NamedIndividual>
     
 
@@ -752,26 +976,62 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/OutputBR09">
         <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
-        <rdf:type>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdf:type>
-        <rdf:type>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/Field"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdf:type>
         <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/Realistic"/>
         <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/Unrealistic"/>
         <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/Unusual"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/OutputBR10 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/OutputBR10">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/Realistic"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/Unrealistic"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/Unusual"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/OutputBR11 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/OutputBR11">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/Realistic"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/Unrealistic"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/Unusual"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/OutputBR12 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/OutputBR12">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/Realistic"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/Unrealistic"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/Unusual"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/OutputBR13 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/OutputBR13">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/Realistic"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/Unrealistic"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/Unusual"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/OutputBRAccuracy -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/OutputBRAccuracy">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/BIGOWL4DQ/Integer"/>
     </owl:NamedIndividual>
     
 
@@ -780,24 +1040,29 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/OutputBRCompleteness">
         <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
-        <rdf:type>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdf:type>
-        <rdf:type>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/Field"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdf:type>
         <bigowl4dq:domain rdf:resource="https://w3id.org/BIGOWL4DQ/Integer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/OutputBRDQAssessment -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/OutputBRDQAssessment">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/BadQuality"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/EnoughQuality"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/NonUsable"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/Suitable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/OutputBRDUD -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/OutputBRDUD">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/DoNotUse"/>
+        <bigowl4dq:domain rdf:resource="https://w3id.org/data-quality-smart-farm/Use"/>
     </owl:NamedIndividual>
     
 
@@ -805,26 +1070,35 @@
     <!-- https://w3id.org/data-quality-smart-farm/Realistic -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/Realistic">
-        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataType"/>
         <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Enumerate"/>
-        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
-        <rdf:type>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdf:type>
-        <rdf:type>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/Field"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/Suitable -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/Suitable">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Enumerate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/T_120cm -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/T_120cm">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/Field"/>
+        <bigowl4dq:hasFieldDomain rdf:resource="https://w3id.org/BIGOWL4DQ/Double"/>
+        <bigowl4dq:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T_120cm</bigowl4dq:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/T_150cm -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/T_150cm">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/Field"/>
+        <bigowl4dq:hasFieldDomain rdf:resource="https://w3id.org/BIGOWL4DQ/Double"/>
+        <bigowl4dq:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T_150cm</bigowl4dq:name>
     </owl:NamedIndividual>
     
 
@@ -832,20 +1106,30 @@
     <!-- https://w3id.org/data-quality-smart-farm/T_30cm -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/T_30cm">
-        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
         <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/Field"/>
-        <rdf:type>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/Field"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdf:type>
         <bigowl4dq:hasFieldDomain rdf:resource="https://w3id.org/BIGOWL4DQ/Double"/>
         <bigowl4dq:isCompleteField rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</bigowl4dq:isCompleteField>
         <bigowl4dq:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T_30cm</bigowl4dq:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/T_60cm -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/T_60cm">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/Field"/>
+        <bigowl4dq:hasFieldDomain rdf:resource="https://w3id.org/BIGOWL4DQ/Double"/>
+        <bigowl4dq:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T_60cm</bigowl4dq:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/T_90cm -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/T_90cm">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/Field"/>
+        <bigowl4dq:hasFieldDomain rdf:resource="https://w3id.org/BIGOWL4DQ/Double"/>
+        <bigowl4dq:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T_90cm</bigowl4dq:name>
     </owl:NamedIndividual>
     
 
@@ -904,30 +1188,61 @@
     
 
 
+    <!-- https://w3id.org/data-quality-smart-farm/Use -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/Use">
+        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Enumerate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/VW_120cm -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/VW_120cm">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/Field"/>
+        <bigowl4dq:hasFieldDomain rdf:resource="https://w3id.org/BIGOWL4DQ/Double"/>
+        <bigowl4dq:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VW_120cm</bigowl4dq:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/VW_150cm -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/VW_150cm">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/Field"/>
+        <bigowl4dq:hasFieldDomain rdf:resource="https://w3id.org/BIGOWL4DQ/Double"/>
+        <bigowl4dq:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VW_150cm</bigowl4dq:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/data-quality-smart-farm/VW_30cm -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/VW_30cm">
-        <rdf:type rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/Data"/>
         <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/Field"/>
-        <rdf:type>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.ontologies.khaos.uma.es/bigowl/PrimitiveType"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/BusinessOutput"/>
-                    <rdf:Description rdf:about="https://w3id.org/BIGOWL4DQ/Field"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdf:type>
         <bigowl4dq:hasFieldDomain rdf:resource="https://w3id.org/BIGOWL4DQ/Double"/>
-        <bigowl4dq:isCompleteField rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</bigowl4dq:isCompleteField>
         <bigowl4dq:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VW_30cm</bigowl4dq:name>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/data-quality-smart-farm/VW_60 -->
+    <!-- https://w3id.org/data-quality-smart-farm/VW_60cm -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/VW_60"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/VW_60cm">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/Field"/>
+        <bigowl4dq:hasFieldDomain rdf:resource="https://w3id.org/BIGOWL4DQ/Double"/>
+        <bigowl4dq:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VW_60cm</bigowl4dq:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/data-quality-smart-farm/VW_90cm -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/data-quality-smart-farm/VW_90cm">
+        <rdf:type rdf:resource="https://w3id.org/BIGOWL4DQ/Field"/>
+        <bigowl4dq:hasFieldDomain rdf:resource="https://w3id.org/BIGOWL4DQ/Double"/>
+        <bigowl4dq:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VW_90cm</bigowl4dq:name>
+    </owl:NamedIndividual>
     
 
 
@@ -1225,128 +1540,6 @@
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/data-quality-smart-farm#hit">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BRAssessmentCorrect</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessRuleDataQualityMeasurementDimension"/>
-                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#brMD"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/outputResult"/>
-                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#brMD"/>
-                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#orMD"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessRuleDataQualityAssessment"/>
-                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#br"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/outputDomain"/>
-                                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#br"/>
-                                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#od"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/inputDomain"/>
-                                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#br"/>
-                                                        <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#orMD"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasClause"/>
-                                                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#br"/>
-                                                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasCondition"/>
-                                                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
-                                                                        <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cond"/>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                        <rdf:first>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/outputClause"/>
-                                                                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
-                                                                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#outCl"/>
-                                                                            </rdf:Description>
-                                                                        </rdf:first>
-                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/isCorrect"/>
-                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#br"/>
-                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
@@ -2634,9 +2827,21 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
-                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
-                        <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cl2"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                        <swrl:arguments>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:resource="https://w3id.org/data-quality-smart-farm#num"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </swrl:arguments>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -2644,21 +2849,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
-                                <swrl:arguments>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first rdf:resource="https://w3id.org/data-quality-smart-farm#num"/>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </swrl:arguments>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasClause"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#br"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -2666,10 +2860,10 @@
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasClause"/>
-                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#br"/>
-                                        <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cl2"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/isCompleteClause"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl2"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -2680,7 +2874,7 @@
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                 <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasClause"/>
                                                 <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#br"/>
-                                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
+                                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cl2"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -2688,10 +2882,9 @@
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                 <rdf:first>
                                                     <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/isCompleteClause"/>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
                                                         <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
-                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                                                        <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cl2"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -2701,7 +2894,7 @@
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                                                 <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/isCompleteClause"/>
-                                                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl2"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
                                                                 <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
                                                             </rdf:Description>
                                                         </rdf:first>
@@ -2743,10 +2936,21 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/isCompleteCondition"/>
-                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cond"/>
-                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                        <swrl:arguments>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:resource="https://w3id.org/data-quality-smart-farm#num"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </swrl:arguments>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -2754,21 +2958,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
-                                <swrl:arguments>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first rdf:resource="https://w3id.org/data-quality-smart-farm#num"/>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </swrl:arguments>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasClause"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#br"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -2776,9 +2969,10 @@
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
-                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cond"/>
-                                        <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cond2"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hitCondition"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cond2"/>
+                                        <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#hit"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -2789,7 +2983,7 @@
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                 <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasCondition"/>
                                                 <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
-                                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cond"/>
+                                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cond2"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -2797,10 +2991,10 @@
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                 <rdf:first>
                                                     <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasClause"/>
-                                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#br"/>
-                                                        <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/numberCondition"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
+                                                        <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#num"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -2808,10 +3002,10 @@
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                         <rdf:first>
                                                             <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasCondition"/>
-                                                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
-                                                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cond2"/>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/isCompleteCondition"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cond"/>
+                                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest>
@@ -2820,9 +3014,9 @@
                                                                 <rdf:first>
                                                                     <rdf:Description>
                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/numberCondition"/>
-                                                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
-                                                                        <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#num"/>
+                                                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hitCondition"/>
+                                                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cond"/>
+                                                                        <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#hit"/>
                                                                     </rdf:Description>
                                                                 </rdf:first>
                                                                 <rdf:rest>
@@ -2830,10 +3024,10 @@
                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                         <rdf:first>
                                                                             <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hitCondition"/>
-                                                                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cond"/>
-                                                                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#hit"/>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasCondition"/>
+                                                                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
+                                                                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cond"/>
                                                                             </rdf:Description>
                                                                         </rdf:first>
                                                                         <rdf:rest>
@@ -2852,10 +3046,9 @@
                                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                                         <rdf:first>
                                                                                             <rdf:Description>
-                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasAssociatedHitPolicyCriteria"/>
-                                                                                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
-                                                                                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#hit"/>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cond"/>
+                                                                                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cond2"/>
                                                                                             </rdf:Description>
                                                                                         </rdf:first>
                                                                                         <rdf:rest>
@@ -2864,8 +3057,8 @@
                                                                                                 <rdf:first>
                                                                                                     <rdf:Description>
                                                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hitCondition"/>
-                                                                                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cond2"/>
+                                                                                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasAssociatedHitPolicyCriteria"/>
+                                                                                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
                                                                                                         <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#hit"/>
                                                                                                     </rdf:Description>
                                                                                                 </rdf:first>
@@ -3040,10 +3233,10 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/isCompleteCondition"/>
-                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cond"/>
-                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasClause"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#br"/>
+                        <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -3051,10 +3244,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasCondition"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/numberCondition"/>
                                 <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
-                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cond"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#num"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -3062,10 +3255,10 @@
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasClause"/>
-                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#br"/>
-                                        <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/isCompleteCondition"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cond"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -3074,9 +3267,9 @@
                                         <rdf:first>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/numberCondition"/>
-                                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
-                                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#num"/>
+                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hitCondition"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cond"/>
+                                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#hit"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -3084,21 +3277,10 @@
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                 <rdf:first>
                                                     <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
-                                                        <swrl:arguments>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                <rdf:first rdf:resource="https://w3id.org/data-quality-smart-farm#num"/>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdf:first>
-                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </swrl:arguments>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasCondition"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
+                                                        <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cond"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -3107,8 +3289,8 @@
                                                         <rdf:first>
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hitCondition"/>
-                                                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cond"/>
+                                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasAssociatedHitPolicyCriteria"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
                                                                 <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#hit"/>
                                                             </rdf:Description>
                                                         </rdf:first>
@@ -3117,10 +3299,21 @@
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                 <rdf:first>
                                                                     <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasAssociatedHitPolicyCriteria"/>
-                                                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
-                                                                        <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#hit"/>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                                                                        <swrl:arguments>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:resource="https://w3id.org/data-quality-smart-farm#num"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </swrl:arguments>
                                                                     </rdf:Description>
                                                                 </rdf:first>
                                                                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -3192,6 +3385,128 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/isComplete"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#br"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BRAssessmentCorrect</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessRuleDataQualityMeasurementDimension"/>
+                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#brMD"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/outputResult"/>
+                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#brMD"/>
+                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#orMD"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/BusinessRuleDataQualityAssessment"/>
+                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#br"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/outputDomain"/>
+                                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#br"/>
+                                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#od"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/inputDomain"/>
+                                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#br"/>
+                                                        <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#orMD"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasClause"/>
+                                                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#br"/>
+                                                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/hasCondition"/>
+                                                                        <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
+                                                                        <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#cond"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/outputClause"/>
+                                                                                <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#cl"/>
+                                                                                <swrl:argument2 rdf:resource="https://w3id.org/data-quality-smart-farm#outCl"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/BIGOWL4DQ/isCorrect"/>
                         <swrl:argument1 rdf:resource="https://w3id.org/data-quality-smart-farm#br"/>
                         <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
                     </rdf:Description>
