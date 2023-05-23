@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/BIGOWL4DQ#"
-     xml:base="https://w3id.org/BIGOWL4DQ"
+<rdf:RDF xmlns="https://w3id.org/BIGOWL4DQ/"
+     xml:base="https://w3id.org/BIGOWL4DQ/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -17,7 +17,7 @@
         <terms:license rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://opensource.org/licenses/MIT</terms:license>
         <terms:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aether Group</terms:publisher>
         <terms:rights rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">(c) Aether Group</terms:rights>
-        <terms:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aether</terms:rights>
+        <terms:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(c) Aether Group</terms:rights>
         <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BIGOWL4DQ</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BIGOWL4DQ</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/BIGOWL4DQ</vann:preferredNamespaceUri>
